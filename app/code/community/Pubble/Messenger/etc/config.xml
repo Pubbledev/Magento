@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Pubble_Messenger
+ *
+ * @category  Pubble
+ * @package   Pubble_Messenger
+ * @author    Pubble <ross@pubble.io>
+ * @copyright 2015 Pubble (http://www.pubble.io)
+ * @version   1.0.0
+ */
+-->
+<config>
+    <modules>
+        <Pubble_Messenger>
+            <version>1.0.0</version>
+        </Pubble_Messenger>
+    </modules>
+    <global>
+        <blocks>
+            <pubble_messenger>
+                <class>Pubble_Messenger_Block</class>
+            </pubble_messenger>
+        </blocks>
+        <helpers>
+            <pubble_messenger>
+                <class>Pubble_Messenger_Helper</class>
+            </pubble_messenger>
+        </helpers>
+        <models>
+            <pubble_messenger>
+                <class>Pubble_Messenger_Model</class>
+            </pubble_messenger>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <pubble_messenger>
+                        <type>singleton</type>
+                        <class>Pubble_Messenger_Model_Observer</class>
+                        <method>addPubbleBeforeBodyEnd</method>
+                    </pubble_messenger>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+        </events>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <pubble translate="title" module="pubble_messenger">
+                                            <title>Pubble Messenger Settings</title>
+                                        </pubble>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <phpunit>
+        <suite>
+            <modules>
+                <Pubble_Messenger/>
+            </modules>
+        </suite>
+    </phpunit>
+</config>

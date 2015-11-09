@@ -1,0 +1,3 @@
+app/code/community/Pubble/Messenger                         app/code/community/Pubble/Messenger
+app/design/frontend/base/default/template/pubble/messenger  app/design/frontend/base/default/template/pubble/messenger
+app/etc/modules/Pubble_Messenger.xml                        app/etc/modules/Pubble_Messenger.xml

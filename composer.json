@@ -1,0 +1,28 @@
+{
+  "name": "pubbledev/magento",
+  "description": "Magento Module to integrate with the Pubble support/messaging platform.",
+  "type": "magento-module",
+  "homepage": "https://github.com/pubbledev/magento",
+  "license": "BSD-3-Clause",
+  "keywords": ["pubble", "support", "messaging", "faq"],
+  "authors": [
+    {
+      "name": "Pubble",
+      "homepage": "http://www.pubble.io/",
+      "role": "owner"
+    },
+    {
+      "name": "StudioForty9",
+      "homepage": "http://www.studioforty9.com/",
+      "role": "developer"
+    },
+    {
+      "name": "Eoghan O'Brien",
+      "homepage": "http://github.com/eoghanobrien/",
+      "role": "developer"
+    }
+  ],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Pubble_Messenger
+ *
+ * @category  Pubble
+ * @package   Pubble_Messenger
+ * @author    Pubble <ross@pubble.io>
+ * @copyright 2015 Pubble (http://www.pubble.io)
+ * @version   1.0.0
+ */
+-->
+<config>
+    <modules>
+        <Pubble_Messenger>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Pubble_Messenger>
+    </modules>
+</config>
