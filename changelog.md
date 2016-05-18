@@ -1,5 +1,9 @@
 ## Changelog
 
+### Version 1.1.0
+
+- Added support for the new faster loader
+- Configuration is now much simpler, you just enter your App ID and Identifier code
 
 ### Version 1.0.0
 

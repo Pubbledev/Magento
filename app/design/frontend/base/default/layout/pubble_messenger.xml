@@ -10,11 +10,8 @@
  * @version   1.1.0
  */
 -->
-<config>
-    <modules>
-        <Pubble_Messenger>
-            <active>true</active>
-            <codePool>community</codePool>
-        </Pubble_Messenger>
-    </modules>
-</config>
+<layout version="0.1.0">
+    <reference name="before_body_end">
+        <block type="pubble_messenger/html" name="pubble.messenger.html" template="pubble/messenger/html.phtml"/>
+    </reference>
+</layout>

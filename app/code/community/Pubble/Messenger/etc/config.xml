@@ -6,14 +6,14 @@
  * @category  Pubble
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
- * @copyright 2015 Pubble (http://www.pubble.io)
- * @version   1.0.0
+ * @copyright 2016 Pubble (http://www.pubble.io)
+ * @version   1.1.0
  */
 -->
 <config>
     <modules>
         <Pubble_Messenger>
-            <version>1.0.0</version>
+            <version>1.1.0</version>
         </Pubble_Messenger>
     </modules>
     <global>
@@ -32,6 +32,13 @@
                 <class>Pubble_Messenger_Model</class>
             </pubble_messenger>
         </models>
+        <resources>
+            <pubble_messenger_setup>
+                <setup>
+                    <module>Pubble_Messenger</module>
+                </setup>
+            </pubble_messenger_setup>
+        </resources>
     </global>
     <frontend>
         <events>

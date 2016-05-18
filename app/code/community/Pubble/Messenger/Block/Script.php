@@ -5,8 +5,8 @@
  * @category  Pubble
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
- * @copyright 2015 Pubble (http://www.pubble.io)
- * @version   1.0.0
+ * @copyright 2016 Pubble (http://www.pubble.io)
+ * @version   1.1.0
  */
 
 /**
@@ -22,7 +22,7 @@ class Pubble_Messenger_Block_Script extends Mage_Core_Block_Template
      * The pubble javascript library code URL.
      * @var string
      */
-    protected $_url = '//www.pubble.io/resources/javascript/QAInit.js';
+    protected $_url = '//d2dfzm19238yrf.cloudfront.net/javascript/loader.js';
     
     /**
      * Render the javascript to initialize the pubble messenger.
@@ -31,66 +31,13 @@ class Pubble_Messenger_Block_Script extends Mage_Core_Block_Template
      */
     public function render()
     {
-        return ($this->isCopyPaste()) ? $this->renderCode() : $this->renderCredentials();
-    }
-    
-    /**
-     * Is the configuration method set to 'Copy & Paste'?
-     *
-     * @return bool
-     */
-    protected function isCopyPaste()
-    {
-        return $this->_getHelper()->isMethodCopyPaste();
-    }
-    
-    /**
-     * Render the copy and pasted code.
-     *
-     * @return string
-     */
-    protected function renderCode()
-    {
-        return $this->_getHelper()->getCode();
-    }
-    
-    /**
-     * Render the tag to fetch the pubble javascript library code.
-     *
-     * @return string
-     */
-    protected function renderJsUrl()
-    {
-        return sprintf('<script type="text/javascript" src="%s"></script>', $this->_url);
-    }
-    
-    /**
-     * Render the javascript to initialize the pubble messenger.
-     *
-     * @return string
-     */
-    protected function renderJsScript()
-    {
         $appId = $this->_getHelper()->getAppId();
         $identifier = $this->_getHelper()->getIdentifier();
-        
-        $html = sprintf(
-            '<script type="text/javascript">var lpQA = lpQA({appID: "%s", identifier: "%s"});</script>',
-            $appId,
-            $identifier
-        );
 
-        return $html;
-    }
-    
-    /**
-     * Render the javascript using credential variables.
-     *
-     * @return string
-     */
-    protected function renderCredentials()
-    {
-        return sprintf("%s\n%s", $this->renderJsUrl(), $this->renderJsScript());
+        return sprintf(
+            '<div class="pubble-app" data-app-id="%s" data-app-identifier="%s"></div><script type="text/javascript" src="%s" defer></script>',
+            $appId, $identifier, $this->_url
+        );
     }
     
     /**

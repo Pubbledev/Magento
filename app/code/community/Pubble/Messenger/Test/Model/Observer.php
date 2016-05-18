@@ -5,8 +5,8 @@
  * @category  Pubble
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
- * @copyright 2015 Pubble (http://www.pubble.io)
- * @version   1.0.0
+ * @copyright 2016 Pubble (http://www.pubble.io)
+ * @version   1.1.0
  */
 
 /**
@@ -59,8 +59,9 @@ class Pubble_Messenger_Test_Model_Observer extends Pubble_Messenger_Test_Case
      */
     public function it_returns_the_pubble_block_with_the_correct_parameters_set()
     {
-        $html = '<code>goes here</code>';
-        $helper = $this->getMockDataHelper(1, 2, false, true, '123456', '123456', $html);
+        $html = '<div class="pubble-app" data-app-id="123456" data-app-identifier="123456"></div><script type="text/javascript" src="//d2dfzm19238yrf.cloudfront.net/javascript/loader.js" defer></script>';
+
+        $helper = $this->getMockDataHelper(1, '123456', '123456');
         $this->replaceByMock('helper', 'pubble_messenger', $helper);
         
         $layout = Mage::app()->getLayout();

@@ -5,8 +5,8 @@
  * @category  Pubble
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
- * @copyright 2015 Pubble (http://www.pubble.io)
- * @version   1.0.0
+ * @copyright 2016 Pubble (http://www.pubble.io)
+ * @version   1.1.0
  */
 
 /**
@@ -38,7 +38,7 @@ class Pubble_Messenger_Model_Observer
      *
      * @return mixed
      */
-    public function addPubbleBeforeBodyEnd($observer)
+    public function addPubbleBeforeBodyEnd()
     {
         if (! $this->_getHelper()->isEnabled()) {
             return $this;
