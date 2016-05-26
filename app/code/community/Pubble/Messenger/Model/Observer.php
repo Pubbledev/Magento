@@ -48,11 +48,15 @@ class Pubble_Messenger_Model_Observer
             /** @var Mage_Core_Model_Layout $layout */
             /** @var Pubble_Messenger_Block_Script $pubble */
             $layout = Mage::app()->getLayout();
-            $pubble = $layout->createBlock(self::BLOCK_NAME, self::BLOCK_ALIAS);
-            $pubble->setTemplate(self::BLOCK_TEMPLATE);
-            $layout->getBlock(self::BLOCK_TARGET)->append($pubble);
+            
+            if ($layout) {
+                $pubble = $layout->createBlock(self::BLOCK_NAME, self::BLOCK_ALIAS);
+                $pubble->setTemplate(self::BLOCK_TEMPLATE);
+                $layout->getBlock(self::BLOCK_TARGET)->append($pubble);
+            }
             
             return $pubble;
+
         } catch (Exception $e) {
             Mage::logException($e);
             return false;
