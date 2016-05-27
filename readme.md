@@ -20,8 +20,6 @@ Easily install your Pubble messenger code on Magento via the admin configuration
 
 ## Changelog
 
-Version 1.1.2 is the second major release.
-
 [Changelog](changelog.md)
 
 ## Compability
