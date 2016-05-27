@@ -6,7 +6,7 @@
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
  * @copyright 2016 Pubble (http://www.pubble.io)
- * @version   1.1.0
+ * @version   1.1.2
  */
 
 /**
@@ -31,6 +31,10 @@ class Pubble_Messenger_Block_Script extends Mage_Core_Block_Template
      */
     public function render()
     {
+        if (! $this->_getHelper()->isEnabled()) {
+            return false;
+        }
+
         $appId = $this->_getHelper()->getAppId();
         $identifier = $this->_getHelper()->getIdentifier();
 

@@ -1,5 +1,13 @@
 ## Changelog
 
+### Version 1.1.2
+
+- Removed the observer in favour of purely layout XML instead
+
+### Version 1.1.1
+
+- Fixed a bug with the observer that loaded the Pubble script
+
 ### Version 1.1.0
 
 - Added support for the new faster loader

@@ -1,3 +1,4 @@
-app/code/community/Pubble/Messenger                         app/code/community/Pubble/Messenger
-app/design/frontend/base/default/template/pubble/messenger  app/design/frontend/base/default/template/pubble/messenger
-app/etc/modules/Pubble_Messenger.xml                        app/etc/modules/Pubble_Messenger.xml
+app/code/community/Pubble/Messenger/                            app/code/community/Pubble/Messenger/
+app/etc/modules/Pubble_Messenger.xml                            app/etc/modules/Pubble_Messenger.xml
+app/design/frontend/base/default/template/pubble/*              app/design/frontend/base/default/template/pubble
+app/design/frontend/base/default/layout/pubble_messenger.xml    app/design/frontend/base/default/layout/

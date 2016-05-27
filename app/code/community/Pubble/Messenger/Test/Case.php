@@ -6,7 +6,7 @@
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
  * @copyright 2016 Pubble (http://www.pubble.io)
- * @version   1.1.0
+ * @version   1.1.2
  */
 
 /**

@@ -7,11 +7,13 @@
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
  * @copyright 2016 Pubble (http://www.pubble.io)
- * @version   1.1.0
+ * @version   1.1.2
  */
 -->
 <layout version="0.1.0">
-    <reference name="before_body_end">
-        <block type="pubble_messenger/html" name="pubble.messenger.html" template="pubble/messenger/html.phtml"/>
-    </reference>
+    <default>
+        <reference name="before_body_end">
+            <block type="pubble_messenger/script" name="pubble.messenger.script" after="-" template="pubble/messenger/script.phtml"/>
+        </reference>
+    </default>
 </layout>

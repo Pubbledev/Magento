@@ -6,7 +6,7 @@
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
  * @copyright 2016 Pubble (http://www.pubble.io)
- * @version   1.1.0
+ * @version   1.1.2
  */
 
 /**
@@ -37,7 +37,7 @@ class Pubble_Messenger_Test_Config_Module extends EcomDev_PHPUnit_Test_Case_Conf
      */
     public function module_version_is_correct()
     {
-        $this->assertModuleVersion('1.1.0');
+        $this->assertModuleVersion('1.1.2');
     }
 
     /**

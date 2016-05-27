@@ -7,13 +7,13 @@
  * @package   Pubble_Messenger
  * @author    Pubble <ross@pubble.io>
  * @copyright 2016 Pubble (http://www.pubble.io)
- * @version   1.1.0
+ * @version   1.1.2
  */
 -->
 <config>
     <modules>
         <Pubble_Messenger>
-            <version>1.1.0</version>
+            <version>1.1.2</version>
         </Pubble_Messenger>
     </modules>
     <global>
@@ -41,17 +41,13 @@
         </resources>
     </global>
     <frontend>
-        <events>
-            <controller_action_layout_generate_blocks_after>
-                <observers>
-                    <pubble_messenger>
-                        <type>singleton</type>
-                        <class>Pubble_Messenger_Model_Observer</class>
-                        <method>addPubbleBeforeBodyEnd</method>
-                    </pubble_messenger>
-                </observers>
-            </controller_action_layout_generate_blocks_after>
-        </events>
+        <layout>
+            <updates>
+                <pubble_messenger>
+                    <file>pubble_messenger.xml</file>
+                </pubble_messenger>
+            </updates>
+        </layout>
     </frontend>
     <adminhtml>
         <acl>
